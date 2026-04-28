@@ -12,4 +12,10 @@ describe('App', () => {
     render(<App />);
     expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(/building something nice/i);
   });
+
+  it('renders the app version from package.json', () => {
+    render(<App />);
+    const version = screen.getByTestId('app-version');
+    expect(version).toHaveTextContent(/^v\d+\.\d+\.\d+/);
+  });
 });

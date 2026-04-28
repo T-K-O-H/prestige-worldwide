@@ -14,6 +14,9 @@ export default function App() {
         </code>{' '}
         and the deploy pipeline ships this page to a public URL.
       </p>
+      <p className="mt-10 font-mono text-xs text-zinc-600" data-testid="app-version">
+        v{__APP_VERSION__}
+      </p>
     </main>
   );
 }
